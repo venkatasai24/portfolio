@@ -10,21 +10,21 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 bg-gradient-to-r from-green-200 via-blue-200 to-purple-200 text-gray-600 py-6 relative z-10">
+    <header className="sticky top-0 bg-white text-gray-600 py-6 relative z-10">
       {/* Transparent glass effect */}
       <div className="absolute inset-0 bg-opacity-40 backdrop-filter backdrop-blur-lg"></div>
 
       <div className="container mx-auto flex justify-between items-center relative">
         <h1 className="text-3xl text-black font-bold mx-4">{"<VS/>"}</h1>
         <nav className="hidden md:flex space-x-4">
-          <ul className="flex space-x-4">
+          <ul className="flex space-x-6">
             <li>
               <Link
                 to="about"
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
               >
                 About
               </Link>
@@ -35,7 +35,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
               >
                 Skills
               </Link>
@@ -46,7 +46,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
               >
                 Projects
               </Link>
@@ -57,7 +57,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
               >
                 Contact
               </Link>
@@ -79,7 +79,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
                 onClick={toggleMenu}
               >
                 About
@@ -91,7 +91,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
                 onClick={toggleMenu}
               >
                 Skills
@@ -103,7 +103,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
                 onClick={toggleMenu}
               >
                 Projects
@@ -115,7 +115,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
                 onClick={toggleMenu}
               >
                 Contact

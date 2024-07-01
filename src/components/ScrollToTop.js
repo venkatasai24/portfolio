@@ -29,11 +29,11 @@ const ScrollToTop = () => {
   return (
     <div className="fixed bottom-6 right-6">
       {visible && (
-        <button
-          onClick={scrollToTop}
-          className="p-2 bg-red-400 text-white hover:bg-red-500"
-        >
-          <FaArrowUp size={24} />
+        <button onClick={scrollToTop} className="p-2 bg-red-500 text-white">
+          <FaArrowUp
+            className="hover:mt-1 hover:-translate-y-1 transform ease-in-out duration-300"
+            size={24}
+          />
         </button>
       )}
     </div>

@@ -20,7 +20,7 @@ const Contact = () => {
             have a chat 💭!
           </p>
           <p className="text-lg text-gray-700 mb-2 mx-10">
-            I'm up for turning great ideas into reality ✨.
+            I'm up for turning great ideas into reality 🔮.
           </p>
           <p className="text-lg text-gray-700 mb-6 mx-10">
             Let's brainstorm over a cup of coffee ☕!
@@ -63,7 +63,7 @@ const Contact = () => {
           </div>
           <a
             href="mailto:venkatasai24042004@gmail.com"
-            className="bg-gradient-to-r from-green-200 via-blue-200 to-purple-200 text-gray-600 hover:text-black  py-3 px-6 shadow-md border-b-4 border-transparent hover:border-red-500"
+            className="cursor-pointer text-white py-3 px-6 transition duration-300 ease-in-out transform border-b-4 bg-black border-transparent hover:border-yellow-400"
           >
             Work with me
           </a>

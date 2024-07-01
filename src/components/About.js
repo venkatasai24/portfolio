@@ -19,7 +19,7 @@ const About = () => {
           <motion.img
             src={Avatar}
             alt="Avatar"
-            className="w-72 h-72 object-cover border-4 border-red-500 transition duration-300 ease-in-out animate-blob"
+            className="w-72 h-72 object-cover border-4 border-yellow-400 transition duration-300 ease-in-out animate-blob"
           />
         </motion.div>
         <div className="md:w-1/2">
@@ -29,7 +29,7 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <p className="text-lg text-gray-600 mb-2">Hi 👋</p>
+            <p className="text-lg text-gray-600 mb-2">👋 Hi !</p>
             <p className="text-lg text-gray-600 mb-2">
               This is{" "}
               <span className="text-green-500 hover:bg-black">Venkata Sai</span>{" "}
@@ -60,7 +60,7 @@ const About = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer bg-gradient-to-r from-green-200 to-blue-200 text-gray-600 hover:text-black py-3 px-6 m-4 shadow-md transition duration-300 ease-in-out transform border-b-4 border-transparent hover:border-red-500"
+                className="cursor-pointer text-white py-3 px-6 m-4 lg:ml-0 md:ml-0 transition duration-300 ease-in-out transform border-b-4 bg-black border-transparent hover:border-yellow-400"
               >
                 View Projects
               </Link>
@@ -68,7 +68,7 @@ const About = () => {
                 href="https://drive.google.com/file/d/1EW7mAcyTU2yIBXn8qZuFwLBwAewgEUoL/view"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-pointer bg-gradient-to-r from-blue-200 to-purple-200 text-gray-600 hover:text-black py-3 px-6 m-4 shadow-md transition duration-300 ease-in-out transform border-b-4 border-transparent hover:border-red-500"
+                className="cursor-pointer text-white py-3 px-6 m-4 transition duration-300 ease-in-out transform border-b-4 bg-black border-transparent hover:border-yellow-400"
               >
                 View Resume
               </a>

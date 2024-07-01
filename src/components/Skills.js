@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { FaReact, FaNodeJs, FaDatabase, FaGitAlt } from "react-icons/fa";
 import { DiMongodb, DiJavascript1, DiCss3, DiHtml5 } from "react-icons/di";
 import { SiExpress, SiCplusplus, SiMysql } from "react-icons/si";
@@ -74,17 +73,15 @@ const Skills = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
-            <motion.div
+            <div
               key={index}
-              className="border-2 hover:border-red-500 relative flex items-center rounded-full overflow-hidden shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-opacity-30 text-white p-4 m-2 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
+              className="border-2 hover:border-red-500 relative flex items-center overflow-hidden bg-white backdrop-filter backdrop-blur-lg border-transparent text-white p-4 m-2 hover:shadow-lg transition duration-300 ease-in-out transform"
             >
               <div className="text-5xl mr-2">{skill.icon}</div>
               <span className="text-gray-600 text-xl font-semibold">
                 {skill.name}
               </span>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
