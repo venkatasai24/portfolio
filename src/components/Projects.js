@@ -45,7 +45,7 @@ const projects = [
       "Experience sorting algorithms like never before with the Sorting Visualization project. This interactive tool allows you to see the magic of sorting in real-time, supporting algorithms like bubble sort and merge sort. Developed with HTML, CSS, and JavaScript, it's beginner-friendly yet insightful for experts. Don't just read about sorting algorithms, witness them in action!",
     image: Sort,
     github: "https://github.com/venkatasai24/Sorting-Visualizer/",
-    live: "https://github.com/venkatasai24/Sorting-Visualizer/",
+    live: "https://sorting-visualizer-3bxs.onrender.com/",
   },
 ];
 
