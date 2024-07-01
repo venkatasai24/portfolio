@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Tilt from "react-parallax-tilt"; // Import Tilt from react-parallax-tilt
 import Avatar from "../assets/venkata_sai.jpg"; // Replace with your avatar image path
 import { Link } from "react-scroll";
 
@@ -17,18 +16,11 @@ const About = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <Tilt className="w-72 h-72">
-            <motion.img
-              src={Avatar}
-              alt="Avatar"
-              className="w-full h-full object-cover border-4 border-red-400 rounded-full hover:border-red-500 transition duration-300 ease-in-out"
-              whileHover={{
-                scale: 1.05,
-                rotateZ: 2,
-                transition: { duration: 0.3 },
-              }}
-            />
-          </Tilt>
+          <motion.img
+            src={Avatar}
+            alt="Avatar"
+            className="w-72 h-72 object-cover border-4 border-red-500 transition duration-300 ease-in-out animate-blob"
+          />
         </motion.div>
         <div className="md:w-1/2">
           <motion.div
