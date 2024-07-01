@@ -2,8 +2,10 @@ import React from "react";
 import { FaLinkedin, FaGithub, FaInstagram } from "react-icons/fa";
 
 const Contact = () => {
+  const currentYear = new Date().getFullYear();
+
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="pt-20 bg-white">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl text-center text-gray-800 mb-8">
           {"<Connect/>"}
@@ -67,6 +69,11 @@ const Contact = () => {
           </a>
         </div>
       </div>
+      <footer className="text-center py-4 mt-10 mb-2">
+        <p className="text-black">
+          &copy; {currentYear} Venkata Sai. All rights reserved.
+        </p>
+      </footer>
     </section>
   );
 };

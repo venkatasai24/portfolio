@@ -15,7 +15,7 @@ const Header = () => {
       <div className="absolute inset-0 bg-opacity-40 backdrop-filter backdrop-blur-lg"></div>
 
       <div className="container mx-auto flex justify-between items-center relative">
-        <h1 className="text-3xl text-black font-bold mx-4">{"<VS />"}</h1>
+        <h1 className="text-3xl text-black font-bold mx-4">{"<VS/>"}</h1>
         <nav className="hidden md:flex space-x-4">
           <ul className="flex space-x-4">
             <li>
