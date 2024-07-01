@@ -24,7 +24,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
               >
                 About
               </Link>
@@ -35,7 +35,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
               >
                 Skills
               </Link>
@@ -46,7 +46,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
               >
                 Projects
               </Link>
@@ -57,7 +57,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
               >
                 Contact
               </Link>
@@ -79,7 +79,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
                 onClick={toggleMenu}
               >
                 About
@@ -91,7 +91,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
                 onClick={toggleMenu}
               >
                 Skills
@@ -103,7 +103,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
                 onClick={toggleMenu}
               >
                 Projects
@@ -115,7 +115,7 @@ const Header = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black"
+                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-red-500"
                 onClick={toggleMenu}
               >
                 Contact

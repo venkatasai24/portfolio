@@ -53,7 +53,9 @@ const Projects = () => {
   return (
     <section id="projects" className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl text-center text-gray-800 mb-14">./Projects</h2>
+        <h2 className="text-4xl text-center text-gray-800 mb-14">
+          {"<Projects/>"}
+        </h2>
         <div className="flex flex-wrap -mx-4">
           {projects.map((project, index) => (
             <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
@@ -63,7 +65,7 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-48 object-cover"
                 />
-                <div className="border-r-2 border-l-2 border-red-300 p-6">
+                <div className="border-r-2 border-l-2 border-red-500 p-6">
                   <h3 className="text-2xl font-semibold text-gray-800 mb-2">
                     {project.title}
                   </h3>

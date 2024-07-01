@@ -31,7 +31,7 @@ const ScrollToTop = () => {
       {visible && (
         <button
           onClick={scrollToTop}
-          className="p-2 rounded-md bg-red-300 text-white hover:bg-red-400"
+          className="p-2 bg-red-400 text-white hover:bg-red-500"
         >
           <FaArrowUp size={24} />
         </button>

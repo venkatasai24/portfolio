@@ -5,7 +5,9 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl text-center text-gray-800 mb-8">./Connect</h2>
+        <h2 className="text-4xl text-center text-gray-800 mb-8">
+          {"<Connect/>"}
+        </h2>
         <div className="text-center">
           <p className="text-lg text-gray-700 mb-2 mx-10">
             I'm always open to discussing new projects, creative ideas 💡, or
@@ -59,7 +61,7 @@ const Contact = () => {
           </div>
           <a
             href="mailto:venkatasai24042004@gmail.com"
-            className="bg-gradient-to-r from-green-200 via-blue-200 to-purple-200 text-gray-600 hover:text-black  py-3 px-6 rounded-lg shadow-md"
+            className="bg-gradient-to-r from-green-200 via-blue-200 to-purple-200 text-gray-600 hover:text-black  py-3 px-6 shadow-md border-b-4 border-transparent hover:border-red-500"
           >
             Work with me
           </a>

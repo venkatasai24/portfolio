@@ -17,11 +17,11 @@ const About = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <Tilt className="rounded-lg w-72 h-72 shadow-xl">
+          <Tilt className="w-72 h-72">
             <motion.img
               src={Avatar}
               alt="Avatar"
-              className="w-full h-full object-cover border-4 border-red-400 rounded-xl"
+              className="w-full h-full object-cover border-4 border-red-400 rounded-full hover:border-red-500 transition duration-300 ease-in-out"
               whileHover={{
                 scale: 1.05,
                 rotateZ: 2,
@@ -52,7 +52,7 @@ const About = () => {
               I interned at{" "}
               <a
                 href="https://www.linkedin.com/company/apvinlabs/posts/?feedView=all"
-                className="text-blue-500"
+                className="text-blue-500 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -67,7 +67,7 @@ const About = () => {
                 spy={true}
                 smooth={true}
                 duration={500}
-                className="cursor-pointer bg-gradient-to-r from-green-200 to-blue-200 text-gray-600 hover:text-black py-3 px-6 m-4 rounded-lg shadow-md transition duration-300 ease-in-out transform "
+                className="cursor-pointer bg-gradient-to-r from-green-200 to-blue-200 text-gray-600 hover:text-black py-3 px-6 m-4 shadow-md transition duration-300 ease-in-out transform border-b-4 border-transparent hover:border-red-500"
               >
                 View Projects
               </Link>
@@ -75,7 +75,7 @@ const About = () => {
                 href="https://drive.google.com/file/d/1EW7mAcyTU2yIBXn8qZuFwLBwAewgEUoL/view"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="cursor-pointer bg-gradient-to-r from-blue-200 to-purple-200 text-gray-600 hover:text-black py-3 px-6 m-4 rounded-lg shadow-md transition duration-300 ease-in-out transform "
+                className="cursor-pointer bg-gradient-to-r from-blue-200 to-purple-200 text-gray-600 hover:text-black py-3 px-6 m-4 shadow-md transition duration-300 ease-in-out transform border-b-4 border-transparent hover:border-red-500"
               >
                 View Resume
               </a>

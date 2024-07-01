@@ -69,12 +69,14 @@ const Skills = () => {
   return (
     <section id="skills" className="py-20 bg-white mt-10 lg:mt-0">
       <div className="container mx-auto px-6">
-        <h2 className="text-4xl text-center text-gray-800 mb-8">./Skills</h2>
+        <h2 className="text-4xl text-center text-gray-800 mb-8">
+          {"<Skills/>"}
+        </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              className="border-2 border-red-500 relative flex items-center rounded-full overflow-hidden shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-opacity-30 text-white p-4 m-2 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
+              className="border-2 hover:border-red-500 relative flex items-center rounded-full overflow-hidden shadow-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg border-opacity-30 text-white p-4 m-2 hover:shadow-xl transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
