@@ -65,7 +65,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className="md:hidden mx-4">
-          <button onClick={toggleMenu} className="text-2xl">
+          <button onClick={toggleMenu} className="text-2xl text-black">
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
         </div>

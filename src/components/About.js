@@ -39,9 +39,10 @@ const About = () => {
           >
             <p className="text-lg text-gray-600 mb-2">Hi 👋</p>
             <p className="text-lg text-gray-600 mb-2">
-              This is <span className="text-green-500">Venkata Sai</span> from{" "}
-              <i className="hover:text-black">Andhra Pradesh</i>, currently an
-              incoming 4th-year B.Tech Computer Science student 💻 at{" "}
+              This is{" "}
+              <span className="text-green-500 hover:bg-black">Venkata Sai</span>{" "}
+              from <i className="hover:text-black">Andhra Pradesh</i>, currently
+              an incoming 4th-year B.Tech Computer Science student 💻 at{" "}
               <i className="hover:text-black">NIT Calicut</i>.
             </p>
             <p className="text-lg text-gray-600 mb-2">
@@ -52,7 +53,7 @@ const About = () => {
               I interned at{" "}
               <a
                 href="https://www.linkedin.com/company/apvinlabs/posts/?feedView=all"
-                className="text-blue-500 hover:underline"
+                className="text-blue-500 hover:bg-black"
                 target="_blank"
                 rel="noopener noreferrer"
               >
