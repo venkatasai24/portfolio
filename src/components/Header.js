@@ -22,6 +22,7 @@ const Header = () => {
               <Link
                 to="about"
                 spy={true}
+                activeClass="current-section"
                 smooth={true}
                 duration={500}
                 className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
@@ -33,6 +34,7 @@ const Header = () => {
               <Link
                 to="skills"
                 spy={true}
+                activeClass="current-section"
                 smooth={true}
                 duration={500}
                 className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
@@ -44,6 +46,7 @@ const Header = () => {
               <Link
                 to="projects"
                 spy={true}
+                activeClass="current-section"
                 smooth={true}
                 duration={500}
                 className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
@@ -55,6 +58,7 @@ const Header = () => {
               <Link
                 to="contact"
                 spy={true}
+                activeClass="current-section"
                 smooth={true}
                 duration={500}
                 className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
@@ -77,6 +81,7 @@ const Header = () => {
               <Link
                 to="about"
                 spy={true}
+                activeClass="current-section"
                 smooth={true}
                 duration={500}
                 className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
@@ -89,6 +94,7 @@ const Header = () => {
               <Link
                 to="skills"
                 spy={true}
+                activeClass="current-section"
                 smooth={true}
                 duration={500}
                 className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
@@ -101,6 +107,7 @@ const Header = () => {
               <Link
                 to="projects"
                 spy={true}
+                activeClass="current-section"
                 smooth={true}
                 duration={500}
                 className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
@@ -113,6 +120,7 @@ const Header = () => {
               <Link
                 to="contact"
                 spy={true}
+                activeClass="current-section"
                 smooth={true}
                 duration={500}
                 className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"

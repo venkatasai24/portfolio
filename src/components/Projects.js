@@ -59,14 +59,14 @@ const Projects = () => {
         <div className="flex flex-wrap -mx-4">
           {projects.map((project, index) => (
             <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-              <div className="bg-white overflow-hidden shadow-lg hover:shadow-xl duration-300 transform ease-in-out">
+              <div className="group bg-white overflow-hidden shadow-lg hover:shadow-xl duration-300 transform ease-in-out">
                 <img
                   src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover hover:scale-105 transform ease-in-out duration-300"
                 />
                 <div className="p-6">
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+                  <h3 className="group-hover:border-green-500 border-b-4 border-transparent text-2xl font-semibold text-gray-800 mb-2">
                     {project.title}
                   </h3>
                   <p className="text-gray-600 mb-4">{project.description}</p>
