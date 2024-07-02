@@ -1,10 +1,10 @@
 import React from "react";
 import { FaGithub, FaLink } from "react-icons/fa";
-import ECommerce from "../assets/e-commerce.png";
-import Face from "../assets/face.png";
-import Ui from "../assets/ui.png";
-import Sort from "../assets/sort.png";
-import Bbms from "../assets/bbms.png";
+import ECommerce from "../assets/images/e-commerce.png";
+import Face from "../assets/images/face.png";
+import Ui from "../assets/images/ui.png";
+import Sort from "../assets/images/sort.png";
+import Bbms from "../assets/images/bbms.png";
 
 const projects = [
   {

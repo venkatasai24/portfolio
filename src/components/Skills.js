@@ -1,18 +1,18 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaDatabase, FaGitAlt } from "react-icons/fa";
+import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { DiMongodb, DiJavascript1, DiCss3, DiHtml5 } from "react-icons/di";
 import { SiExpress, SiCplusplus, SiMysql } from "react-icons/si";
-
-const cLogoUrl =
-  "https://upload.wikimedia.org/wikipedia/commons/1/18/C_Programming_Language.svg"; // Replace with your custom C logo URL
-
-const pythonUrl =
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/640px-Python-logo-notext.svg.png";
+import cUrl from "../assets/icons/C.svg";
+import pythonUrl from "../assets/icons/Python.svg";
+import numpyUrl from "../assets/icons/NumPy.svg";
+import matplotlibUrl from "../assets/icons/Matplotlib.svg";
+import tailUrl from "../assets/icons/Tailwind CSS.svg";
+import pandasUrl from "../assets/icons/pandas.svg";
 
 const skills = [
   {
     name: "C",
-    icon: <img src={cLogoUrl} alt="C logo" className="w-12 h-12" />,
+    icon: <img src={cUrl} alt="C logo" className="w-12 h-12" />,
   },
   {
     name: "C++",
@@ -20,7 +20,7 @@ const skills = [
   },
   {
     name: "Python",
-    icon: <img src={pythonUrl} alt="python ogo" className="w-12 h-12" />, // Python icon color
+    icon: <img src={pythonUrl} alt="python logo" className="w-12 h-12" />, // Python icon color
   },
   {
     name: "HTML",
@@ -29,6 +29,10 @@ const skills = [
   {
     name: "CSS",
     icon: <DiCss3 style={{ color: "#1572B6" }} />, // CSS icon color
+  },
+  {
+    name: "TailWind CSS",
+    icon: <img src={tailUrl} alt="tailwind css logo" className="w-12 h-12" />, // Python icon color
   },
   {
     name: "JavaScript",
@@ -55,12 +59,20 @@ const skills = [
     icon: <SiMysql style={{ color: "#4479A1" }} />, // SQL icon color
   },
   {
-    name: "Git",
-    icon: <FaGitAlt style={{ color: "#F05032" }} />, // Git icon color
+    name: "MatPlotLib",
+    icon: <img src={matplotlibUrl} alt="mat logo" className="w-12 h-12" />, // Python icon color
   },
   {
-    name: "Data Structures and Algorithms",
-    icon: <FaDatabase style={{ color: "#4DB33D" }} />, // Data Structures and Algorithms icon color
+    name: "Numpy",
+    icon: <img src={numpyUrl} alt="num logo" className="w-12 h-12" />, // Python icon color
+  },
+  {
+    name: "Pandas",
+    icon: <img src={pandasUrl} alt="pandas logo" className="w-12 h-12" />, // Python icon color
+  },
+  {
+    name: "Git",
+    icon: <FaGitAlt style={{ color: "#F05032" }} />, // Git icon color
   },
 ];
 
