@@ -123,18 +123,18 @@ const Contact = () => {
           </a>
         </div>
         <div className="text-center">
-          <p className="text-lg text-gray-700 mb-2 mx-10">
+          <p className="text-lg text-gray-700 mb-2">
             I'm always open to discussing new projects, creative ideas 💡, or
             opportunities to be part of your vision.
           </p>
-          <p className="text-lg text-gray-700 mb-2 mx-10">
+          <p className="text-lg text-gray-700 mb-2">
             Feel free to reach out if you want to collaborate, hire me, or just
             have a chat 💭!
           </p>
-          <p className="text-lg text-gray-700 mb-2 mx-10">
+          <p className="text-lg text-gray-700 mb-2">
             I'm up for turning great ideas into reality 🔮.
           </p>
-          <p className="text-lg text-gray-700 mb-6 mx-10">
+          <p className="text-lg text-gray-700 mb-8">
             Let's brainstorm over a cup of coffee ☕!
           </p>
           <form ref={form} onSubmit={sendEmail} className="text-center mb-8">
