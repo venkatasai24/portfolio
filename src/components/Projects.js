@@ -64,6 +64,7 @@ const Projects = () => {
                   src={project.image}
                   alt={project.title}
                   className="w-full h-48 object-cover hover:scale-105 transform ease-in-out duration-300"
+                  loading="lazy"
                 />
                 <div className="p-6">
                   <h3 className="group-hover:border-green-500 border-b-4 border-transparent text-2xl font-semibold text-gray-800 mb-2">

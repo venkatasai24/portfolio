@@ -12,7 +12,7 @@ import pandasUrl from "../assets/icons/pandas.svg";
 const skills = [
   {
     name: "C",
-    icon: <img src={cUrl} alt="C logo" className="w-12 h-12" />,
+    icon: <img src={cUrl} alt="C logo" className="w-12 h-12" loading="lazy" />,
   },
   {
     name: "C++",
@@ -20,7 +20,14 @@ const skills = [
   },
   {
     name: "Python",
-    icon: <img src={pythonUrl} alt="python logo" className="w-12 h-12" />, // Python icon color
+    icon: (
+      <img
+        src={pythonUrl}
+        alt="python logo"
+        className="w-12 h-12"
+        loading="lazy"
+      />
+    ), // Python icon color
   },
   {
     name: "HTML",
@@ -32,7 +39,14 @@ const skills = [
   },
   {
     name: "TailWind CSS",
-    icon: <img src={tailUrl} alt="tailwind css logo" className="w-12 h-12" />, // Python icon color
+    icon: (
+      <img
+        src={tailUrl}
+        alt="tailwind css logo"
+        className="w-12 h-12"
+        loading="lazy"
+      />
+    ), // Python icon color
   },
   {
     name: "JavaScript",
@@ -60,15 +74,31 @@ const skills = [
   },
   {
     name: "MatPlotLib",
-    icon: <img src={matplotlibUrl} alt="mat logo" className="w-12 h-12" />, // Python icon color
+    icon: (
+      <img
+        src={matplotlibUrl}
+        alt="mat logo"
+        className="w-12 h-12"
+        loading="lazy"
+      />
+    ), // Python icon color
   },
   {
     name: "Numpy",
-    icon: <img src={numpyUrl} alt="num logo" className="w-12 h-12" />, // Python icon color
+    icon: (
+      <img src={numpyUrl} alt="num logo" className="w-12 h-12" loading="lazy" />
+    ), // Python icon color
   },
   {
     name: "Pandas",
-    icon: <img src={pandasUrl} alt="pandas logo" className="w-12 h-12" />, // Python icon color
+    icon: (
+      <img
+        src={pandasUrl}
+        alt="pandas logo"
+        className="w-12 h-12"
+        loading="lazy"
+      />
+    ), // Python icon color
   },
   {
     name: "Git",

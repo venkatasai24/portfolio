@@ -20,6 +20,7 @@ const About = () => {
             src={Avatar}
             alt="Avatar"
             className="w-72 h-72 object-cover border-4 border-yellow-400 transition duration-300 ease-in-out animate-blob"
+            loading="lazy"
           />
         </motion.div>
         <div className="md:w-1/2">
