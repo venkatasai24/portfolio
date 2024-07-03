@@ -167,7 +167,9 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              className="cursor-pointer text-white py-3 px-6 transition duration-300 ease-in-out transform border-b-4 bg-black border-transparent hover:border-yellow-400"
+              className={`cursor-pointer text-white py-3 px-6 transition duration-300 ease-in-out transform border-b-4 bg-black border-transparent hover:border-yellow-400 ${
+                isLoading && "border-yellow-400"
+              }`}
               disabled={isLoading}
             >
               {isLoading ? "sending ..." : "Send Message"}
