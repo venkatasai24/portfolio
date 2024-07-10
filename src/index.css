@@ -101,11 +101,6 @@ body {
   animation: blob 8s infinite;
 }
 
-.current-section {
-  border-bottom: 4px solid black;
-  color: black;
-}
-
 .loader-overlay {
   position: fixed;
   top: 0;
@@ -135,4 +130,27 @@ body {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.link-animation {
+  position: relative;
+}
+
+.link-animation::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.link-animation.current-section::before,
+.link-animation:hover::before {
+  opacity: 1;
+  transform: translateX(0);
 }

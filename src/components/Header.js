@@ -25,7 +25,7 @@ const Header = () => {
                 activeClass="current-section"
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
+                className="cursor-pointer pb-1 link-animation"
               >
                 About
               </Link>
@@ -37,7 +37,7 @@ const Header = () => {
                 activeClass="current-section"
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
+                className="cursor-pointer pb-1 link-animation"
               >
                 Skills
               </Link>
@@ -49,7 +49,7 @@ const Header = () => {
                 activeClass="current-section"
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
+                className="cursor-pointer pb-1 link-animation"
               >
                 Projects
               </Link>
@@ -61,7 +61,7 @@ const Header = () => {
                 activeClass="current-section"
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
+                className="cursor-pointer pb-1 link-animation"
               >
                 Contact
               </Link>
@@ -84,7 +84,7 @@ const Header = () => {
                 activeClass="current-section"
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
+                className="cursor-pointer pb-1 link-animation"
                 onClick={toggleMenu}
               >
                 About
@@ -97,7 +97,7 @@ const Header = () => {
                 activeClass="current-section"
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
+                className="cursor-pointer pb-1 link-animation"
                 onClick={toggleMenu}
               >
                 Skills
@@ -110,7 +110,7 @@ const Header = () => {
                 activeClass="current-section"
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
+                className="cursor-pointer pb-1 link-animation"
                 onClick={toggleMenu}
               >
                 Projects
@@ -123,7 +123,7 @@ const Header = () => {
                 activeClass="current-section"
                 smooth={true}
                 duration={500}
-                className="cursor-pointer hover:text-black border-b-4 pb-1 border-transparent hover:border-black"
+                className="cursor-pointer pb-1 link-animation"
                 onClick={toggleMenu}
               >
                 Contact
