@@ -33,9 +33,17 @@ const About = () => {
             <p className="text-lg text-gray-600 mb-2">👋 Hi !</p>
             <p className="text-lg text-gray-600 mb-2">
               This is{" "}
-              <span className="text-green-500 hover:bg-black">Venkata Sai</span>{" "}
-              from <i className="hover:text-black">Andhra Pradesh</i>, currently
-              an incoming 4th-year B.Tech Computer Science student 💻 at{" "}
+              <a
+                href="https://www.linkedin.com/in/venkata-sai-vedurupaka"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span className="text-green-500 hover:bg-black">
+                  Venkata Sai
+                </span>
+              </a>{" "}
+              from <i className="hover:text-black">Andhra Pradesh</i>, a
+              4th-year B.Tech student in Computer Science 💻 at{" "}
               <i className="hover:text-black">NIT Calicut</i>.
             </p>
             <p className="text-lg text-gray-600 mb-2">
@@ -66,7 +74,7 @@ const About = () => {
                 View Projects
               </Link>
               <a
-                href="https://drive.google.com/file/d/1EW7mAcyTU2yIBXn8qZuFwLBwAewgEUoL/view"
+                href="https://drive.google.com/file/d/1120kuU0KZCbaGno7ePDLGTfin8oGLPhY/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cursor-pointer text-white py-3 px-6 m-4 transition duration-300 ease-in-out transform border-b-4 bg-black border-transparent hover:border-yellow-400"

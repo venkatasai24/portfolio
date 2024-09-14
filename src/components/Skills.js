@@ -1,22 +1,31 @@
 import React from "react";
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { DiMongodb, DiJavascript1, DiCss3, DiHtml5 } from "react-icons/di";
+import { DiMongodb, DiJavascript1 } from "react-icons/di";
 import { SiExpress, SiCplusplus, SiMysql } from "react-icons/si";
-import cUrl from "../assets/icons/C.svg";
 import pythonUrl from "../assets/icons/Python.svg";
 import numpyUrl from "../assets/icons/NumPy.svg";
 import matplotlibUrl from "../assets/icons/Matplotlib.svg";
 import tailUrl from "../assets/icons/Tailwind CSS.svg";
 import pandasUrl from "../assets/icons/pandas.svg";
+import oopsUrl from "../assets/icons/computer.png";
+import dsaUrl from "../assets/icons/data-structure.png";
 
 const skills = [
   {
-    name: "C",
-    icon: <img src={cUrl} alt="C logo" className="w-12 h-12" loading="lazy" />,
-  },
-  {
     name: "C++",
     icon: <SiCplusplus style={{ color: "#00599C" }} />, // C++ icon color
+  },
+  {
+    name: "Algorithms",
+    icon: (
+      <img src={dsaUrl} alt="dsa logo" className="w-12 h-12" loading="lazy" />
+    ), // dsa icon color
+  },
+  {
+    name: "Oops",
+    icon: (
+      <img src={oopsUrl} alt="oops logo" className="w-12 h-12" loading="lazy" />
+    ), // oops icon color
   },
   {
     name: "Python",
@@ -28,14 +37,6 @@ const skills = [
         loading="lazy"
       />
     ), // Python icon color
-  },
-  {
-    name: "HTML",
-    icon: <DiHtml5 style={{ color: "#E34F26" }} />, // HTML icon color
-  },
-  {
-    name: "CSS",
-    icon: <DiCss3 style={{ color: "#1572B6" }} />, // CSS icon color
   },
   {
     name: "TailWind CSS",
@@ -120,7 +121,13 @@ const Skills = () => {
               className="border-2 hover:border-red-500 relative flex items-center overflow-hidden bg-white backdrop-filter backdrop-blur-lg border-transparent text-white p-4 m-2 hover:shadow-lg transition duration-300 ease-in-out transform"
             >
               <div className="text-5xl mr-2">{skill.icon}</div>
-              <span className="text-gray-600 text-xl font-semibold">
+              <span
+                className={`text-gray-600 text-xl font-semibold ${
+                  ["Algorithms", "Git", "MongoDB", "Express"].includes(
+                    skill.name
+                  ) && `text-green-500 hover:bg-black`
+                }`}
+              >
                 {skill.name}
               </span>
             </div>
