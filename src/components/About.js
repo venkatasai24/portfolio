@@ -43,25 +43,32 @@ const About = () => {
                 </span>
               </a>{" "}
               from <i className="hover:text-black">Andhra Pradesh</i>, a
-              4th-year B.Tech student in Computer Science 💻 at{" "}
+              final year CS student 💻 at{" "}
               <i className="hover:text-black">NIT Calicut</i>.
             </p>
-            <p className="text-lg text-gray-600 mb-2">
-              I'm a passionate developer with a love for creating beautiful ✨
-              and functional web applications.
-            </p>
             <p className="text-lg text-gray-600 mb-8">
-              I interned at{" "}
+              Currently interning as an SDE 👨‍💻 at{" "}
               <a
-                href="https://www.linkedin.com/company/apvinlabs/posts/?feedView=all"
-                className="text-blue-500 hover:bg-black"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Apvin Labs
-              </a>{" "}
-              as a Software Developer, where I developed vision therapy games 🎮
-              using ReactJS and CSS.
+              href="https://www.linkedin.com/company/increff/posts/?feedView=all"
+              className="text-red-500 hover:bg-black"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Increff
+            </a>{" "}, 
+              with previous experience developing vision therapy games 🎮 at{" "}
+              <a
+              href="https://www.linkedin.com/company/apvinlabs/posts/?feedView=all"
+              className="text-blue-500 hover:bg-black"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Apvin Labs
+            </a>{" "}
+              using React. 
+            </p>
+            <p className="text-lg text-gray-600 mb-2">
+              I'm passionate about building impactful web applications ⚒️.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start">
               <Link
