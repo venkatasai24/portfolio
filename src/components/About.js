@@ -46,7 +46,7 @@ const About = () => {
               final year CS student 💻 at{" "}
               <i className="hover:text-black">NIT Calicut</i>.
             </p>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-gray-600 mb-2">
               Currently interning as an SDE 👨‍💻 at{" "}
               <a
               href="https://www.linkedin.com/company/increff/posts/?feedView=all"
