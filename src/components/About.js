@@ -42,33 +42,35 @@ const About = () => {
                   Venkata Sai
                 </span>
               </a>{" "}
-              from <i className="hover:text-black">Andhra Pradesh</i>, a
-              final year CS student 💻 at{" "}
-              <i className="hover:text-black">NIT Calicut</i>.
+              from <i className="hover:text-black">Andhra Pradesh</i>, a proud graduate of{" "}
+              <i className="hover:text-black">NIT Calicut</i> 🎓.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              Currently interning as an SDE 👨‍💻 at{" "}
+              Currently working as an <i className="hover:text-black">SDE-1</i> 👨‍💻 at{" "}
               <a
-              href="https://www.linkedin.com/company/increff/posts/?feedView=all"
-              className="text-red-500 hover:bg-black"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Increff
-            </a>{" "}, 
-              with previous experience developing vision therapy games 🎮 at{" "}
-              <a
-              href="https://www.linkedin.com/company/apvinlabs/posts/?feedView=all"
-              className="text-blue-500 hover:bg-black"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Apvin Labs
-            </a>{" "}
-              using React. 
+                href="https://www.linkedin.com/company/increff/posts/?feedView=all"
+                className="text-red-500 hover:bg-black"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Increff
+              </a>
+              . I previously interned here as an <i className="hover:text-black">SDE Intern</i>, where I worked on various technologies like Flask, Kubernetes, and more to optimize infrastructure workflows 🚀.
             </p>
             <p className="text-lg text-gray-600 mb-2">
-              I'm passionate about building impactful web applications ⚒️.
+              Earlier, I developed vision therapy games 🎮 at{" "}
+              <a
+                href="https://www.linkedin.com/company/apvinlabs/posts/?feedView=all"
+                className="text-blue-500 hover:bg-black"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apvin Labs
+              </a>{" "}
+              using React.
+            </p>
+            <p className="text-lg text-gray-600 mb-2">
+              I’m passionate about building impactful web applications ⚒️ and solving complex problems.
             </p>
             <div className="flex flex-wrap justify-center md:justify-start">
               <Link

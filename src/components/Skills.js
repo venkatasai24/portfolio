@@ -1,7 +1,7 @@
 import React from "react";
 import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
 import { DiMongodb, DiJavascript1 } from "react-icons/di";
-import { SiExpress, SiCplusplus, SiMysql } from "react-icons/si";
+import { SiExpress, SiCplusplus, SiMysql, SiFlask, SiKubernetes, SiNeo4J, SiSpring } from "react-icons/si";
 import pythonUrl from "../assets/icons/Python.svg";
 import numpyUrl from "../assets/icons/NumPy.svg";
 import matplotlibUrl from "../assets/icons/Matplotlib.svg";
@@ -85,6 +85,22 @@ const skills = [
     ), // Python icon color
   },
   {
+    name: "Kubernetes",
+    icon: <SiKubernetes style={{ color: "#326CE5" }} />, // Kubernetes icon color
+  },
+  {
+    name: "Flask",
+    icon: <SiFlask style={{ color: "#000" }} />, // Flask icon color
+  },
+  {
+    name:"Neo4j",
+    icon: <SiNeo4J style={{ color: "#014063" }} />, // Neo4j icon color
+  },
+  {
+    name:"Spring",
+    icon: <SiSpring style={{ color: "#6DB33F" }} />, // Spring icon color
+  },
+  {
     name: "Numpy",
     icon: (
       <img src={numpyUrl} alt="num logo" className="w-12 h-12" loading="lazy" />
@@ -123,7 +139,7 @@ const Skills = () => {
               <div className="text-5xl mr-2">{skill.icon}</div>
               <span
                 className={`text-gray-600 text-xl font-semibold ${
-                  ["Algorithms", "Git", "MongoDB", "Express"].includes(
+                  ["Algorithms", "Git", "MongoDB", "React", "Kubernetes"].includes(
                     skill.name
                   ) && `text-green-500 hover:bg-black`
                 }`}
