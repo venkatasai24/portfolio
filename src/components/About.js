@@ -6,7 +6,7 @@ const B = "1px solid #211e17";
 
 const Stat = ({ k, v, accent }) => (
   <div style={{ display: "flex", alignItems: "baseline" }}>
-    <span style={{ fontFamily: "monospace", fontSize: 11, color: "#6b6455", minWidth: 72, flexShrink: 0 }}>{k}</span>
+    <span style={{ fontFamily: "monospace", fontSize: 11, color: "#6b6455", minWidth: 60, flexShrink: 0 }}>{k}</span>
     <span style={{ fontSize: 13, color: accent ? "#f59e0b" : "#a8a29e", fontWeight: accent ? 500 : 400 }}>{v}</span>
   </div>
 );
@@ -41,8 +41,8 @@ const About = () => {
 
       <div className="flex flex-col md:flex-row" style={{ flex: 1 }}>
         {/* Left */}
-        <motion.div className="md:flex-1"
-          style={{ padding: "48px 40px", borderRight: B, display: "flex", flexDirection: "column", justifyContent: "space-between" }}
+        <motion.div className="md:flex-1 px-5 md:px-10 rr-border min-h-[calc(100vh-52px)] md:min-h-0"
+          style={{ paddingTop: 48, paddingBottom: 48, display: "flex", flexDirection: "column", justifyContent: "space-between" }}
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: "easeOut" }}>
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 36 }}>
@@ -74,19 +74,19 @@ const About = () => {
               onMouseLeave={e => (e.currentTarget.style.backgroundColor = "#f59e0b")}>
               ./projects
             </Link>
-            <a href="https://drive.google.com/file/d/1120kuU0KZCbaGno7ePDLGTfin8oGLPhY/view"
+            {/* <a href="https://drive.google.com/file/d/1120kuU0KZCbaGno7ePDLGTfin8oGLPhY/view"
               target="_blank" rel="noopener noreferrer"
               style={{ padding: "10px 20px", fontSize: 12, fontWeight: 600, borderRadius: 0, border: "1px solid #3d3829", color: "#a8a29e", fontFamily: "monospace" }}
               onMouseEnter={e => { e.currentTarget.style.borderColor = "#f59e0b"; e.currentTarget.style.color = "#fcd34d"; }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = "#3d3829"; e.currentTarget.style.color = "#a8a29e"; }}>
               ./resume
-            </a>
+            </a> */}
           </div>
         </motion.div>
 
         {/* Right */}
-        <motion.div className="md:w-2/5"
-          style={{ padding: "48px 40px", display: "flex", flexDirection: "column", justifyContent: "space-between" }}
+        <motion.div className="md:w-2/5 px-5 md:px-10"
+          style={{ paddingTop: 32, paddingBottom: 28, display: "flex", flexDirection: "column", justifyContent: "space-between", minWidth: 0 }}
           initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6, delay: 0.15, ease: "easeOut" }}>
           <div>
             <p style={{ fontFamily: "monospace", fontSize: 10, letterSpacing: "0.16em", color: "#78716c", paddingBottom: 12, marginBottom: 22, borderBottom: B }}>
@@ -101,14 +101,14 @@ const About = () => {
             </div>
           </div>
 
-          <div style={{ fontFamily: "monospace", fontSize: 10, lineHeight: 2.2, marginTop: 32 }}>
+          <div style={{ fontFamily: "monospace", fontSize: 10, marginTop: 32, display: "flex", flexWrap: "wrap", columnGap: 16, rowGap: 6 }}>
             {sysInfo.map(({ k, v, accent }) => (
-              <span key={k} style={{ marginRight: 16, whiteSpace: "nowrap" }}>
+              <span key={k} style={{ whiteSpace: "nowrap" }}>
                 <span style={{ color: "#78716c" }}>{k}=</span>
                 <span style={{ color: accent ? "#f59e0b" : "#a8a29e" }}>{v}</span>
               </span>
             ))}
-            <span style={{ color: "#6b6455" }}>{tick}</span>
+            <span style={{ color: "#6b6455", whiteSpace: "nowrap" }}>{tick}</span>
           </div>
         </motion.div>
       </div>

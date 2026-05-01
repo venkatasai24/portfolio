@@ -66,13 +66,13 @@ const Contact = () => {
         style: { background: "#0e0d0b", color: "#f5ede0", border: "1px solid #211e17", fontSize: 13 },
       }} />
 
-      <div style={{ padding: "22px 40px" }}>
+      <div className="px-5 md:px-10" style={{ paddingTop: 22, paddingBottom: 22 }}>
         <span style={{ fontFamily: "monospace", fontSize: 10, letterSpacing: "0.18em", color: "#78716c" }}>&gt; GET IN TOUCH</span>
       </div>
 
       <div className="flex flex-col md:flex-row">
-        <motion.div className="md:w-2/5"
-          style={{ padding: "32px 40px", borderRight: B }}
+        <motion.div className="md:w-2/5 px-5 md:px-10 rr-border"
+          style={{ paddingTop: 32, paddingBottom: 32 }}
           initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <p style={{ fontFamily: "monospace", fontSize: 10, letterSpacing: "0.16em", color: "#78716c", marginBottom: 20 }}>ENDPOINTS</p>
           <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
@@ -80,8 +80,8 @@ const Contact = () => {
           </div>
         </motion.div>
 
-        <motion.div className="md:flex-1"
-          style={{ padding: "32px 40px" }}
+        <motion.div className="md:flex-1 px-5 md:px-10"
+          style={{ paddingTop: 32, paddingBottom: 32 }}
           initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <div style={{ marginBottom: 20 }}>
             <p style={{ fontFamily: "monospace", fontSize: 11, color: "#57534e", marginBottom: 4 }}>
@@ -125,7 +125,7 @@ const Contact = () => {
         </motion.div>
       </div>
 
-      <footer style={{ textAlign: "center", padding: "18px 40px", borderTop: B, color: "#78716c", fontSize: 11, fontFamily: "monospace" }}>
+      <footer className="px-5 md:px-10" style={{ textAlign: "center", paddingTop: 18, paddingBottom: 18, borderTop: B, color: "#78716c", fontSize: 11, fontFamily: "monospace" }}>
         exit(0); &nbsp;·&nbsp; venkatasai · {new Date().getFullYear()}
       </footer>
     </section>

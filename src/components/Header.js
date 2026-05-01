@@ -38,7 +38,7 @@ const Header = () => {
         backgroundColor: "rgba(8,8,7,0.93)",
         backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)",
       }}>
-        <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 40px" }}>
+        <div className="px-5 md:px-10" style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
           <span style={{ fontFamily: "monospace", color: "#f59e0b", fontWeight: 700, fontSize: 15 }}>&gt;_</span>
           <nav className="hidden md:flex" style={{ alignItems: "center", gap: 32 }}>
             {navLinks.map(link => (
@@ -63,7 +63,7 @@ const Header = () => {
         <div className="md:hidden" style={{
           position: "fixed", top: NAV_H, left: 0, right: 0, bottom: 0, zIndex: 49,
           backgroundColor: "#080807",
-          display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 40,
+          display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 28,
         }}>
           {navLinks.map(link => (
             <Link key={link} to={link} smooth duration={500} offset={-NAV_H} onClick={() => setOpen(false)}

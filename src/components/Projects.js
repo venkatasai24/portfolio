@@ -54,9 +54,9 @@ const Row = ({ c, i }) => {
       initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.06 }}>
 
-      <div style={{ display: "grid", gridTemplateColumns: COL, alignItems: "center", padding: "14px 40px", gap: 0 }}>
-        <span style={{ fontFamily: "monospace", fontSize: 11, color: "#6b6455" }}>{c.id}</span>
-        <span style={{ fontFamily: "monospace", fontSize: 11, color: "#78716c", paddingRight: 12, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.image}</span>
+      <div className="proj-row-grid px-5 sm:px-10" style={{ paddingTop: 14, paddingBottom: 14 }}>
+        <span className="hidden sm:block" style={{ fontFamily: "monospace", fontSize: 11, color: "#6b6455" }}>{c.id}</span>
+        <span className="hidden sm:block" style={{ fontFamily: "monospace", fontSize: 11, color: "#78716c", paddingRight: 12, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.image}</span>
         <span style={{ fontSize: 13, fontWeight: 600, color: "#f5ede0", paddingRight: 16, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.title}</span>
 
         <div className="hidden sm:flex" style={{ alignItems: "center", gap: 6 }}>
@@ -84,7 +84,7 @@ const Row = ({ c, i }) => {
         </div>
       </div>
 
-      <div style={{ padding: "0 40px 18px" }}>
+      <div className="px-5 sm:px-10" style={{ paddingBottom: 18 }}>
         <p style={{ fontSize: 13, color: "#78716c", lineHeight: 1.85, marginBottom: 12 }}>{c.desc}</p>
         <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "10px 24px" }}>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
@@ -101,12 +101,12 @@ const Row = ({ c, i }) => {
 
 const Projects = () => (
   <section id="projects" style={{ backgroundColor: "#080807", borderBottom: B }}>
-    <div style={{ padding: "22px 40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+    <div className="px-5 md:px-10" style={{ paddingTop: 22, paddingBottom: 22, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
       <span style={{ fontFamily: "monospace", fontSize: 10, letterSpacing: "0.18em", color: "#6b6455" }}>&gt; WORK</span>
       <span style={{ fontFamily: "monospace", fontSize: 10, color: "#57534e" }}>$ docker ps -a</span>
     </div>
 
-    <div className="hidden sm:grid" style={{ gridTemplateColumns: COL, padding: "9px 40px", gap: 0 }}>
+    <div className="hidden sm:grid px-5 sm:px-10" style={{ gridTemplateColumns: COL, paddingTop: 9, paddingBottom: 9, gap: 0 }}>
       {["CONTAINER ID", "IMAGE", "NAME", "STATUS", "LINKS"].map((h, i) => (
         <span key={i} style={{ fontFamily: "monospace", fontSize: 9, color: "#78716c", letterSpacing: "0.1em" }}>{h}</span>
       ))}

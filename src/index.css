@@ -62,3 +62,25 @@ body {
 .marquee-right { animation: scroll-right 24s linear infinite; }
 .marquee-left2 { animation: scroll-left  38s linear infinite; }
 .marquee-wrap:hover .marquee-track { animation-play-state: paused; }
+
+/* Right border becomes bottom border when panels stack on mobile */
+.rr-border { border-right: 1px solid #211e17; }
+@media (max-width: 767px) {
+  .rr-border { border-right: none; border-bottom: 1px solid #211e17; }
+}
+
+/* Projects: 2-col on mobile, full 5-col on sm+ */
+.proj-row-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 0;
+}
+@media (min-width: 640px) {
+  .proj-row-grid { grid-template-columns: 100px 160px 1fr 140px 64px; }
+}
+
+/* Skills label narrower on mobile */
+@media (max-width: 639px) {
+  .skill-label { min-width: 90px !important; }
+}
