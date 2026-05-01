@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: #080807;
   color: #f5ede0;
@@ -80,7 +84,9 @@ body {
   .proj-row-grid { grid-template-columns: 100px 160px 1fr 140px 64px; }
 }
 
-/* Skills label narrower on mobile */
+/* Skills label: narrower on mobile, wider on desktop */
+.skill-label { min-width: 140px; }
 @media (max-width: 639px) {
-  .skill-label { min-width: 90px !important; }
+  .skill-row   { flex-direction: column; gap: 8px; }
+  .skill-label { min-width: unset; }
 }

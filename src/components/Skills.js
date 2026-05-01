@@ -34,13 +34,13 @@ const Skills = () => (
 
     {rows.map((row, i) => (
       <motion.div key={row.label}
-        className="px-5 md:px-10" style={{ display: "flex", alignItems: "center", paddingTop: 18, paddingBottom: 18 }}
+        className="skill-row px-5 md:px-10" style={{ display: "flex", alignItems: "flex-start", paddingTop: 18, paddingBottom: 18 }}
         initial={{ opacity: 0, x: -12 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.35, delay: i * 0.06 }}
       >
-        <span className="skill-label" style={{ fontFamily: "monospace", fontSize: 10, letterSpacing: "0.14em", color: row.accent ? "#f59e0b" : "#78716c", minWidth: 140, flexShrink: 0 }}>
+        <span className="skill-label" style={{ fontFamily: "monospace", fontSize: 10, letterSpacing: "0.14em", color: row.accent ? "#f59e0b" : "#78716c", flexShrink: 0 }}>
           {row.label}
         </span>
         <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
