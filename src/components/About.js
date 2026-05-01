@@ -96,7 +96,7 @@ const About = () => {
               <Stat k="role"   v="SDE-1 @ Increff"          accent />
               <Stat k="edu"    v="NIT Calicut · B.Tech CSE"       />
               <Stat k="loc"    v="Andhra Pradesh, India"          />
-              <Stat k="status" v="open_to_opportunities"     accent />
+              {/* <Stat k="status" v="open_to_opportunities"     accent /> */}
               <Stat k="prev"   v="Apvin Labs · Increff (intern)"  />
             </div>
           </div>
