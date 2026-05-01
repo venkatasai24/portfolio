@@ -1,106 +1,119 @@
 import React from "react";
-import { FaGithub, FaLink } from "react-icons/fa";
-import ECommerce from "../assets/images/e-commerce.png";
-import Face from "../assets/images/face.png";
-import Ui from "../assets/images/ui.png";
-import Sort from "../assets/images/sort.png";
-import Bbms from "../assets/images/bbms.png";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
-const projects = [
-  {
-    title: "UI",
-    description:
-      "Developed a platform to help users explore and share interview experiences, providing valuable insights for students, professionals, and career-switchers. Key features include bookmarking, advanced search, and markdown support for rich text formatting. Enabled users to read, write, and filter career experiences by categories/tags, and view detailed author profiles. Utilized the MERN stack and JWT for secure user authentication and authorization.",
-    image: Ui,
-    github: "https://github.com/venkatasai24/UI",
-    live: "https://ui-vs.vercel.app",
-  },
-  {
-    title: "Blood Bank Management System",
-    description:
-      "Blood Bank Management System (BBMS) is a web-based application designed to efficiently manage blood donations, recipients and donors. It provides an integrated platform for donors and recipients to ensure the availability of safe and life-saving blood for those in need. Donors can easily register, schedule donations, and track their contributions, while recipients gain quick access to available blood units for timely transfusions.",
-    image: Bbms,
-    github: "https://github.com/venkatasai24/Blood-Bank-Management-System",
-    live: "https://bbms-nitc.000webhostapp.com/",
-  },
-  {
-    title: "E-Commerce",
-    description:
-      "Created a robust e-commerce platform using the MERN stack, featuring secure user authentication via JWT, streamlined checkout processes, and integrated Stripe for secure payments. Utilized responsive design principles for cross-device accessibility, providing users with a seamless and user-friendly shopping experience. The platform includes dynamic search capabilities, efficient product filtering, real-time cart updates, and a comprehensive order history.",
-    image: ECommerce,
-    github: "https://github.com/venkatasai24/Ecommerce",
-    live: "https://ecommerce-vs.vercel.app/login",
-  },
-  {
-    title: "Face Recognition Attendance System",
-    description:
-      "Programmed a face recognition system using TensorFlow and OpenCV, leveraging the VGG19 architecture. Trained on 100 images per person for 3 individuals, achieving an accuracy of 93% on the training dataset. Implemented an attendance logging where recognized names are added to a CSV file along with timestamps.",
-    image: Face,
-    github:
-      "https://github.com/venkatasai24/Face-Recognition-Attendance-System/",
-  },
-  {
+const B = "1px solid #211e17";
+
+const containers = [
+  // { id: "a3f2b891", image: "obs-platform:latest", ports: "0.0.0.0:443->8000/tcp",
+  //   title: "Observability Platform",
+  //   desc: "Production-grade observability stack built from scratch. Instruments distributed traces via OpenTelemetry collector, stores metrics in ClickHouse for sub-second OLAP queries, and streams events through Kafka. Implements multi-window burn-rate SLO alerting, statistical anomaly detection on time-series data, and Slack webhook notifications. FastAPI backend with async ClickHouse queries; React dashboard with live charts. Deployed on GCP with DDNS.",
+  //   stack: ["FastAPI", "React", "ClickHouse", "Kafka", "Prometheus", "OTel", "GCP"],
+  //   github: "https://github.com/venkatasai24/observability", live: "https://venkatasai-obs.ddns.net", status: "running" },
+  { id: "e7c4d209", image: "interview-ui:v2.1", ports: "0.0.0.0:443->3000/tcp",
+    title: "UI — Interview Experiences",
+    desc: "Community platform to share and discover interview experiences across companies. Features JWT-based auth, role-based access, bookmarking, and full-text search with tag and company filters. Posts support markdown with syntax highlighting for code snippets. MongoDB aggregation pipelines back the search and feed ranking.",
+    stack: ["React", "Node.js", "MongoDB", "JWT"],
+    github: "https://github.com/venkatasai24/UI", live: "https://ui-vs.vercel.app", status: "running" },
+  { id: "b8a1f356", image: "ecommerce-api:v1.4", ports: "0.0.0.0:443->3000/tcp",
+    title: "E-Commerce Platform",
+    desc: "Full-stack storefront with JWT auth and refresh-token rotation, Stripe checkout integration, and dynamic product catalog with multi-parameter filtering and sorting. Real-time cart state synced across tabs, order lifecycle management with status tracking, and an admin panel for inventory and order ops.",
+    stack: ["React", "Node.js", "MongoDB", "Stripe"],
+    github: "https://github.com/venkatasai24/Ecommerce", live: "https://ecommerce-vs.vercel.app/login", status: "running" },
+  { id: "c2d9e074", image: "bbms-app:v1.0", ports: "0.0.0.0:80->80/tcp",
+    title: "Blood Bank Management",
+    desc: "Web app for managing blood donations across a college campus. Donors can register, declare blood group, and schedule donation slots. Recipients search available units by type and urgency. Admins manage inventory, donor records, and request fulfilment — all backed by a normalized MySQL schema.",
+    stack: ["HTML", "CSS", "JavaScript", "MySQL"],
+    github: "https://github.com/venkatasai24/Blood-Bank-Management-System", live: "https://bbms-nitc.000webhostapp.com/", status: "running" },
+  { id: "f5a3b128", image: "face-recog:v1.0", ports: "—",
+    title: "Face Recognition Attendance",
+    desc: "Automated attendance system using a fine-tuned VGG19 CNN trained on a custom face dataset. OpenCV handles real-time camera feed, face detection, and frame preprocessing. The model runs inference per frame, matches against enrolled embeddings, and logs timestamped attendance records to CSV. Achieved 93% recognition accuracy on the test set.",
+    stack: ["Python", "TensorFlow", "OpenCV"],
+    github: "https://github.com/venkatasai24/Face-Recognition-Attendance-System/", live: null, status: "exited" },
+  { id: "d6e8c093", image: "sort-viz:v1.2", ports: "0.0.0.0:443->3000/tcp",
     title: "Sorting Visualizer",
-    description:
-      "Experience sorting algorithms like never before with the Sorting Visualization project. This interactive tool allows you to see the magic of sorting in real-time, supporting algorithms like bubble sort and merge sort. Developed with HTML, CSS, and JavaScript, it's beginner-friendly yet insightful for experts. Don't just read about sorting algorithms, witness them in action!",
-    image: Sort,
-    github: "https://github.com/venkatasai24/Sorting-Visualizer/",
-    live: "https://sorting-visualizer-3bxs.onrender.com/",
-  },
+    desc: "Interactive visualizer for classic sorting algorithms — bubble, selection, insertion, merge, and quick sort. Renders live bar animations with color-coded comparisons and swaps. Adjustable array size and animation speed let users observe algorithmic behaviour at different scales.",
+    stack: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/venkatasai24/Sorting-Visualizer/", live: "https://sorting-visualizer-3bxs.onrender.com/", status: "running" },
 ];
 
-const Projects = () => {
+const COL = "100px 160px 1fr 140px 64px";
+
+const Tag = ({ t }) => (
+  <span style={{
+    fontFamily: "monospace", fontSize: 10, padding: "2px 7px",
+    backgroundColor: "#1a0f00", color: "#fcd34d", border: "1px solid #7c2d12", whiteSpace: "nowrap",
+  }}>{t}</span>
+);
+
+const Row = ({ c, i }) => {
+  const running = c.status === "running";
+
   return (
-    <section id="projects" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl text-center text-gray-800 mb-14">
-          {"<Projects/>"}
-        </h2>
-        <div className="flex flex-wrap -mx-4">
-          {projects.map((project, index) => (
-            <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-              <div className="group bg-white overflow-hidden shadow-lg hover:shadow-xl duration-300 transform ease-in-out">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover hover:scale-105 transform ease-in-out duration-300"
-                  loading="lazy"
-                />
-                <div className="p-6">
-                  <h3 className="group-hover:border-green-500 border-b-4 border-transparent text-2xl font-semibold text-gray-800 mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  <div className="flex space-x-4">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 text-2xl hover:text-black transition duration-300"
-                      >
-                        <FaGithub />
-                      </a>
-                    )}
-                    {project.live && (
-                      <a
-                        href={project.live}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-600 text-2xl hover:text-blue-600 transition duration-300"
-                      >
-                        <FaLink />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+    <motion.div style={{ borderBottom: B }}
+      initial={{ opacity: 0, y: 8 }} whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }} transition={{ duration: 0.35, delay: i * 0.06 }}>
+
+      <div style={{ display: "grid", gridTemplateColumns: COL, alignItems: "center", padding: "14px 40px", gap: 0 }}>
+        <span style={{ fontFamily: "monospace", fontSize: 11, color: "#6b6455" }}>{c.id}</span>
+        <span style={{ fontFamily: "monospace", fontSize: 11, color: "#78716c", paddingRight: 12, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.image}</span>
+        <span style={{ fontSize: 13, fontWeight: 600, color: "#f5ede0", paddingRight: 16, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>{c.title}</span>
+
+        <div className="hidden sm:flex" style={{ alignItems: "center", gap: 6 }}>
+          <span style={{ width: 5, height: 5, borderRadius: "50%", flexShrink: 0, backgroundColor: running ? "#f59e0b" : "#3d3829", boxShadow: running ? "0 0 5px #f59e0b" : "none" }} />
+          <span style={{ fontFamily: "monospace", fontSize: 10, color: running ? "#f59e0b" : "#6b6455", whiteSpace: "nowrap" }}>
+            {running ? "running" : "exited (0)"}
+          </span>
+        </div>
+
+        <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+          {c.github && (
+            <a href={c.github} target="_blank" rel="noopener noreferrer" style={{ color: "#6b6455" }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#a8a29e")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#6b6455")}>
+              <FaGithub size={13} />
+            </a>
+          )}
+          {c.live && (
+            <a href={c.live} target="_blank" rel="noopener noreferrer" style={{ color: "#6b6455" }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#f59e0b")}
+              onMouseLeave={e => (e.currentTarget.style.color = "#6b6455")}>
+              <FaExternalLinkAlt size={12} />
+            </a>
+          )}
         </div>
       </div>
-    </section>
+
+      <div style={{ padding: "0 40px 18px" }}>
+        <p style={{ fontSize: 13, color: "#78716c", lineHeight: 1.85, marginBottom: 12 }}>{c.desc}</p>
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "10px 24px" }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+            {c.stack.map(t => <Tag key={t} t={t} />)}
+          </div>
+          <span style={{ fontFamily: "monospace", fontSize: 10, color: "#78716c", marginLeft: "auto" }}>
+            PORTS&nbsp;&nbsp;<span style={{ color: "#a8a29e" }}>{c.ports}</span>
+          </span>
+        </div>
+      </div>
+    </motion.div>
   );
 };
+
+const Projects = () => (
+  <section id="projects" style={{ backgroundColor: "#080807", borderBottom: B }}>
+    <div style={{ padding: "22px 40px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <span style={{ fontFamily: "monospace", fontSize: 10, letterSpacing: "0.18em", color: "#6b6455" }}>&gt; WORK</span>
+      <span style={{ fontFamily: "monospace", fontSize: 10, color: "#57534e" }}>$ docker ps -a</span>
+    </div>
+
+    <div className="hidden sm:grid" style={{ gridTemplateColumns: COL, padding: "9px 40px", gap: 0 }}>
+      {["CONTAINER ID", "IMAGE", "NAME", "STATUS", "LINKS"].map((h, i) => (
+        <span key={i} style={{ fontFamily: "monospace", fontSize: 9, color: "#78716c", letterSpacing: "0.1em" }}>{h}</span>
+      ))}
+    </div>
+
+    {containers.map((c, i) => <Row key={c.id} c={c} i={i} />)}
+  </section>
+);
 
 export default Projects;

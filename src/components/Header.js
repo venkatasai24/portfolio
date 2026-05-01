@@ -1,138 +1,79 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
+
+const navLinks = ["about", "skills", "projects", "contact"];
+const NAV_H = 52;
+const B = "1px solid #211e17";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("about");
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  useEffect(() => {
+    const onScroll = () => {
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8) {
+        setActive(navLinks[navLinks.length - 1]);
+        return;
+      }
+      const scrollPos = window.scrollY + NAV_H + 10;
+      let current = navLinks[0];
+      for (const id of navLinks) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop <= scrollPos) current = id;
+      }
+      setActive(current);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 bg-white text-gray-600 py-6 relative z-10">
-      {/* Transparent glass effect */}
-      <div className="absolute inset-0 bg-opacity-40 backdrop-filter backdrop-blur-lg"></div>
-
-      <div className="container mx-auto flex justify-between items-center relative">
-        <h1 className="text-3xl text-black font-bold mx-4">{"<VS/>"}</h1>
-        <nav className="hidden md:flex space-x-4">
-          <ul className="flex space-x-6">
-            <li>
-              <Link
-                to="about"
-                spy={true}
-                activeClass="current-section"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer pb-1 link-animation"
-              >
-                About
+    <>
+      <header style={{
+        position: "fixed", top: 0, left: 0, right: 0, zIndex: 50,
+        height: NAV_H, borderBottom: B,
+        backgroundColor: "rgba(8,8,7,0.93)",
+        backdropFilter: "blur(14px)", WebkitBackdropFilter: "blur(14px)",
+      }}>
+        <div style={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 40px" }}>
+          <span style={{ fontFamily: "monospace", color: "#f59e0b", fontWeight: 700, fontSize: 15 }}>&gt;_</span>
+          <nav className="hidden md:flex" style={{ alignItems: "center", gap: 32 }}>
+            {navLinks.map(link => (
+              <Link key={link} to={link} smooth duration={500} offset={-NAV_H}
+                className={`nav-link${active === link ? " nav-active" : ""}`}
+                style={{ cursor: "pointer" }}>
+                {link.toUpperCase()}
               </Link>
-            </li>
-            <li>
-              <Link
-                to="skills"
-                spy={true}
-                activeClass="current-section"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer pb-1 link-animation"
-              >
-                Skills
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="projects"
-                spy={true}
-                activeClass="current-section"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer pb-1 link-animation"
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contact"
-                spy={true}
-                activeClass="current-section"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer pb-1 link-animation"
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
-        <div className="md:hidden mx-4">
-          <button onClick={toggleMenu} className="text-2xl text-black">
-            {isOpen ? <FaTimes /> : <FaBars />}
+            ))}
+            <div style={{ width: 1, height: 16, backgroundColor: "#211e17", margin: "0 4px" }} />
+            <a href="https://github.com/venkatasai24" target="_blank" rel="noopener noreferrer" className="nav-icon"><FaGithub size={15} /></a>
+            <a href="https://www.linkedin.com/in/venkata-sai-vedurupaka" target="_blank" rel="noopener noreferrer" className="nav-icon"><FaLinkedin size={15} /></a>
+            <a href="mailto:venkatasai24042004@gmail.com" className="nav-icon"><SiGmail size={14} /></a>
+          </nav>
+          <button className="md:hidden" onClick={() => setOpen(!open)}
+            style={{ color: "#6b6455", background: "none", border: "none", cursor: "pointer", fontSize: 18 }}>
+            {open ? "✕" : "☰"}
           </button>
         </div>
-      </div>
-      {isOpen && (
-        <nav className="md:hidden absolute inset-x-0 top-20 bg-none bg-opacity-90 backdrop-filter backdrop-blur-lg z-20">
-          <ul className="flex flex-col space-y-4 p-4">
-            <li>
-              <Link
-                to="about"
-                spy={true}
-                activeClass="current-section"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer pb-1 link-animation"
-                onClick={toggleMenu}
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="skills"
-                spy={true}
-                activeClass="current-section"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer pb-1 link-animation"
-                onClick={toggleMenu}
-              >
-                Skills
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="projects"
-                spy={true}
-                activeClass="current-section"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer pb-1 link-animation"
-                onClick={toggleMenu}
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contact"
-                spy={true}
-                activeClass="current-section"
-                smooth={true}
-                duration={500}
-                className="cursor-pointer pb-1 link-animation"
-                onClick={toggleMenu}
-              >
-                Contact
-              </Link>
-            </li>
-          </ul>
-        </nav>
+      </header>
+      {open && (
+        <div className="md:hidden" style={{
+          position: "fixed", top: NAV_H, left: 0, right: 0, bottom: 0, zIndex: 49,
+          backgroundColor: "#080807",
+          display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 40,
+        }}>
+          {navLinks.map(link => (
+            <Link key={link} to={link} smooth duration={500} offset={-NAV_H} onClick={() => setOpen(false)}
+              style={{ fontSize: 22, color: "#f5ede0", letterSpacing: "0.18em", fontFamily: "monospace", cursor: "pointer", textTransform: "uppercase" }}>
+              {link}
+            </Link>
+          ))}
+        </div>
       )}
-    </header>
+    </>
   );
 };
 

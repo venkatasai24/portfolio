@@ -1,156 +1,64 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 2s ease-in-out;
-}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 2s ease-in-out;
-}
-
-.animate-float {
-  animation: float 2s ease-in-out infinite;
-}
-
-/* Custom scrollbar styles */
-
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap");
 
 body {
-  scroll-behavior: smooth; /* Enable smooth scrolling */
-  font-family: "Nunito Sans", sans-serif;
+  background-color: #080807;
+  color: #f5ede0;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-/* Scrollbar styles */
-::-webkit-scrollbar {
-  width: 6px;
-}
+::-webkit-scrollbar       { width: 3px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 0; }
 
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgb(239 68 68);
-}
-
-/* src/index.css */
-@font-face {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Nunito Sans Regular");
-}
-
-@font-face {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 600;
-  src: local("Nunito Sans SemiBold");
-}
-
-@font-face {
-  font-family: "Nunito Sans";
-  font-style: normal;
-  font-weight: 700;
-  src: local("Nunito Sans Bold");
-}
-
-/* Add these styles to your CSS file */
-@keyframes blob {
-  0%,
-  100% {
-    border-radius: 40% 60% 70% 30% / 30% 40% 60% 70%;
-  }
-  25% {
-    border-radius: 60% 40% 30% 70% / 40% 60% 70% 30%;
-  }
-  50% {
-    border-radius: 70% 30% 40% 60% / 60% 70% 30% 40%;
-  }
-  75% {
-    border-radius: 30% 70% 60% 40% / 70% 30% 40% 60%;
-  }
-}
-
-.animate-blob {
-  animation: blob 8s infinite;
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes spin   { to   { transform: rotate(360deg); } }
 
 .loader-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: fixed; inset: 0;
+  background: rgba(8, 8, 7, 0.97);
+  display: flex; justify-content: center; align-items: center;
   z-index: 1000;
 }
-
 .loader {
-  border: 6px solid #f3f3f3;
-  border-top: 6px solid black;
+  border: 4px solid #211e17;
+  border-top-color: #f59e0b;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: spin 2s linear infinite;
+  width: 48px; height: 48px;
+  animation: spin 0.85s linear infinite;
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.nav-link {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: #78716c;
+  transition: color 0.18s ease;
+  font-weight: 500;
+  font-family: monospace;
 }
+.nav-link:hover      { color: #f5ede0; }
+.nav-link.nav-active { color: #f59e0b; }
 
-.link-animation {
-  position: relative;
+.nav-icon {
+  color: #78716c;
+  transition: color 0.18s ease;
+  display: flex; align-items: center;
 }
+.nav-icon:hover { color: #f5ede0; }
 
-.link-animation::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 0.3s ease-in-out;
-}
+.proj-icon:hover { color: #a8a29e !important; }
+.proj-link:hover { color: #f59e0b !important; }
 
-.link-animation.current-section::before,
-.link-animation:hover::before {
-  opacity: 1;
-  transform: translateX(0);
-}
+@keyframes scroll-left  { from { transform: translateX(0);    } to { transform: translateX(-50%); } }
+@keyframes scroll-right { from { transform: translateX(-50%); } to { transform: translateX(0);    } }
+.marquee-wrap  { overflow: hidden; }
+.marquee-track { display: flex; width: max-content; }
+.marquee-left  { animation: scroll-left  30s linear infinite; }
+.marquee-right { animation: scroll-right 24s linear infinite; }
+.marquee-left2 { animation: scroll-left  38s linear infinite; }
+.marquee-wrap:hover .marquee-track { animation-play-state: paused; }

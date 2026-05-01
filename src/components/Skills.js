@@ -1,157 +1,54 @@
 import React from "react";
-import { FaReact, FaNodeJs, FaGitAlt } from "react-icons/fa";
-import { DiMongodb, DiJavascript1 } from "react-icons/di";
-import { SiExpress, SiCplusplus, SiMysql, SiFlask, SiKubernetes, SiNeo4J, SiSpring } from "react-icons/si";
-import pythonUrl from "../assets/icons/Python.svg";
-import numpyUrl from "../assets/icons/NumPy.svg";
-import matplotlibUrl from "../assets/icons/Matplotlib.svg";
-import tailUrl from "../assets/icons/Tailwind CSS.svg";
-import pandasUrl from "../assets/icons/pandas.svg";
-import oopsUrl from "../assets/icons/computer.png";
-import dsaUrl from "../assets/icons/data-structure.png";
+import { motion } from "framer-motion";
 
-const skills = [
-  {
-    name: "C++",
-    icon: <SiCplusplus style={{ color: "#00599C" }} />, // C++ icon color
-  },
-  {
-    name: "Algorithms",
-    icon: (
-      <img src={dsaUrl} alt="dsa logo" className="w-12 h-12" loading="lazy" />
-    ), // dsa icon color
-  },
-  {
-    name: "Oops",
-    icon: (
-      <img src={oopsUrl} alt="oops logo" className="w-12 h-12" loading="lazy" />
-    ), // oops icon color
-  },
-  {
-    name: "Python",
-    icon: (
-      <img
-        src={pythonUrl}
-        alt="python logo"
-        className="w-12 h-12"
-        loading="lazy"
-      />
-    ), // Python icon color
-  },
-  {
-    name: "TailWind CSS",
-    icon: (
-      <img
-        src={tailUrl}
-        alt="tailwind css logo"
-        className="w-12 h-12"
-        loading="lazy"
-      />
-    ), // Python icon color
-  },
-  {
-    name: "JavaScript",
-    icon: <DiJavascript1 style={{ color: "#F7DF1E" }} />, // JavaScript icon color
-  },
-  {
-    name: "React",
-    icon: <FaReact style={{ color: "#61DAFB" }} />, // React icon color
-  },
-  {
-    name: "Express",
-    icon: <SiExpress style={{ color: "#000000" }} />, // Express icon color
-  },
-  {
-    name: "Node.js",
-    icon: <FaNodeJs style={{ color: "#339933" }} />, // Node.js icon color
-  },
-  {
-    name: "MongoDB",
-    icon: <DiMongodb style={{ color: "#47A248" }} />, // MongoDB icon color
-  },
-  {
-    name: "SQL",
-    icon: <SiMysql style={{ color: "#4479A1" }} />, // SQL icon color
-  },
-  {
-    name: "MatPlotLib",
-    icon: (
-      <img
-        src={matplotlibUrl}
-        alt="mat logo"
-        className="w-12 h-12"
-        loading="lazy"
-      />
-    ), // Python icon color
-  },
-  {
-    name: "Kubernetes",
-    icon: <SiKubernetes style={{ color: "#326CE5" }} />, // Kubernetes icon color
-  },
-  {
-    name: "Flask",
-    icon: <SiFlask style={{ color: "#000" }} />, // Flask icon color
-  },
-  {
-    name:"Neo4j",
-    icon: <SiNeo4J style={{ color: "#014063" }} />, // Neo4j icon color
-  },
-  {
-    name:"Spring",
-    icon: <SiSpring style={{ color: "#6DB33F" }} />, // Spring icon color
-  },
-  {
-    name: "Numpy",
-    icon: (
-      <img src={numpyUrl} alt="num logo" className="w-12 h-12" loading="lazy" />
-    ), // Python icon color
-  },
-  {
-    name: "Pandas",
-    icon: (
-      <img
-        src={pandasUrl}
-        alt="pandas logo"
-        className="w-12 h-12"
-        loading="lazy"
-      />
-    ), // Python icon color
-  },
-  {
-    name: "Git",
-    icon: <FaGitAlt style={{ color: "#F05032" }} />, // Git icon color
-  },
+const B = "1px solid #211e17";
+
+const rows = [
+  { label: "LANGUAGES",     items: ["C++", "Python", "JavaScript", "Java"],              accent: false },
+  { label: "BACKEND",       items: ["FastAPI", "Node.js", "Express", "Flask", "Spring"], accent: true  },
+  { label: "FRONTEND",      items: ["React", "Tailwind CSS"],                             accent: false },
+  { label: "DATABASES",     items: ["MongoDB", "SQL", "ClickHouse", "Neo4j"],            accent: true  },
+  { label: "INFRA & CLOUD", items: ["Docker", "Kubernetes", "GCP", "Kafka"],             accent: true  },
+  { label: "OBSERVABILITY", items: ["Prometheus", "OpenTelemetry", "Grafana"],           accent: true  },
 ];
 
-const Skills = () => {
-  return (
-    <section id="skills" className="py-20 bg-white mt-10 lg:mt-0">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl text-center text-gray-800 mb-8">
-          {"<Skills/>"}
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {skills.map((skill, index) => (
-            <div
-              key={index}
-              className="border-2 hover:border-red-500 relative flex items-center overflow-hidden bg-white backdrop-filter backdrop-blur-lg border-transparent text-white p-4 m-2 hover:shadow-lg transition duration-300 ease-in-out transform"
-            >
-              <div className="text-5xl mr-2">{skill.icon}</div>
-              <span
-                className={`text-gray-600 text-xl font-semibold ${
-                  ["Algorithms", "Git", "MongoDB", "React", "Kubernetes"].includes(
-                    skill.name
-                  ) && `text-green-500 hover:bg-black`
-                }`}
-              >
-                {skill.name}
-              </span>
-            </div>
-          ))}
+const Pill = ({ label, accent }) => (
+  <span style={{
+    fontFamily: "monospace", fontSize: 12, padding: "3px 10px",
+    border: `1px solid ${accent ? "#7c2d12" : "#211e17"}`,
+    backgroundColor: accent ? "#1a0f00" : "#0e0d0b",
+    color: accent ? "#fcd34d" : "#78716c",
+    whiteSpace: "nowrap",
+  }}>
+    {label}
+  </span>
+);
+
+const Skills = () => (
+  <section id="skills" style={{ backgroundColor: "#080807", borderBottom: B }}>
+    <div style={{ padding: "22px 40px" }}>
+      <span style={{ fontFamily: "monospace", fontSize: 10, letterSpacing: "0.18em", color: "#78716c" }}>
+        &gt; TECHNOLOGIES
+      </span>
+    </div>
+
+    {rows.map((row, i) => (
+      <motion.div key={row.label}
+        style={{ display: "flex", alignItems: "center", padding: "18px 40px" }}
+        initial={{ opacity: 0, x: -12 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.35, delay: i * 0.06 }}
+      >
+        <span style={{ fontFamily: "monospace", fontSize: 10, letterSpacing: "0.14em", color: row.accent ? "#f59e0b" : "#78716c", minWidth: 140, flexShrink: 0 }}>
+          {row.label}
+        </span>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+          {row.items.map(item => <Pill key={item} label={item} accent={row.accent} />)}
         </div>
-      </div>
-    </section>
-  );
-};
+      </motion.div>
+    ))}
+  </section>
+);
 
 export default Skills;

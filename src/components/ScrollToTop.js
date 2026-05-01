@@ -3,40 +3,27 @@ import { FaArrowUp } from "react-icons/fa";
 
 const ScrollToTop = () => {
   const [visible, setVisible] = useState(false);
-
-  const toggleVisibility = () => {
-    if (window.scrollY > 300) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
-    return () => {
-      window.removeEventListener("scroll", toggleVisibility);
-    };
+    const onScroll = () => setVisible(window.scrollY > 300);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
+  if (!visible) return null;
   return (
-    <div className="fixed bottom-6 right-6">
-      {visible && (
-        <button onClick={scrollToTop} className="p-2 bg-red-500 text-white">
-          <FaArrowUp
-            className="hover:mt-1 hover:-translate-y-1 transform ease-in-out duration-300"
-            size={24}
-          />
-        </button>
-      )}
-    </div>
+    <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      style={{
+        position: "fixed", bottom: 24, right: 24,
+        width: 36, height: 36, borderRadius: 0,
+        backgroundColor: "transparent",
+        border: "1px solid #211e17",
+        color: "#f59e0b",
+        display: "flex", alignItems: "center", justifyContent: "center",
+        cursor: "pointer", transition: "border-color 0.15s",
+      }}
+      onMouseEnter={e => (e.currentTarget.style.borderColor = "#f59e0b")}
+      onMouseLeave={e => (e.currentTarget.style.borderColor = "#211e17")}>
+      <FaArrowUp size={12} />
+    </button>
   );
 };
 
